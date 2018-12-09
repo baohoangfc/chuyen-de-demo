@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    
+    <script type="application/x-javascript">
+      addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+      }, false);
+  
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    </script>
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link href="%PUBLIC_URL%/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/shop.css" type="text/css" media="screen" property="" />
+    <link href="%PUBLIC_URL%/css/style7.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="%PUBLIC_URL%/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="%PUBLIC_URL%/css/font-awesome.css" rel="stylesheet">
+
+    
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Montserrat:100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/checkout.css">
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/css/contact.css">
+    
+    
+
+    <title>React App</title>
+  </head>
+  <body>
+      <div id="root"></div>
+      
+  </body>
+  <script>
+    shoe.render();
+
+    shoe.cart.on('shoe_checkout', function (evt) {
+      var items, len, i;
+
+      if (this.subtotal() > 0) {
+        items = this.items();
+
+        for (i = 0, len = items.length; i < len; i++) {}
+      }
+    });
+  </script>
+      <script src="%PUBLIC_URL%/js/jquery-2.2.3.min.js"></script>
+      
+      <script src="%PUBLIC_URL%/js/minicart.js"></script>  
+      
+ 
+      <script src="%PUBLIC_URL%/js/modernizr-2.6.2.min.js"></script>
+      <script src="%PUBLIC_URL%/js/classie.js"></script>
+      <script src="%PUBLIC_URL%/js/demo1.js"></script>
+      <script src="%PUBLIC_URL%/js/search.js"></script>
+      <script src="%PUBLIC_URL%/js/jquery-ui.js"></script>
+      <script>
+        $(window).load(function () {
+          $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 9000,
+            values: [50, 6000],
+            slide: function (event, ui) {
+              $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+          });
+          $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+        });
+      </script>
+      <script type="text/javascript" src="%PUBLIC_URL%/js/move-top.js"></script>
+      <script type="text/javascript" src="%PUBLIC_URL%/js/easing.js"></script>
+      <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+          $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+              scrollTop: $(this.hash).offset().top
+            }, 1000);
+          });
+        });
+      </script>
+      <script type="text/javascript" src="%PUBLIC_URL%/js/bootstrap-3.1.1.min.js"></script>  
+      
+      <script src="%PUBLIC_URL%/js/easy-responsive-tabs.js"></script>
+      <script>
+          $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+              type: 'default', //Types: default, vertical, accordion           
+              width: 'auto', //auto or any width like 600px
+              fit: true, // 100% fit in a container
+              closed: 'accordion', // Start closed if in accordion view
+              activate: function (event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+              }
+            });
+            $('#verticalTab').easyResponsiveTabs({
+              type: 'vertical',
+              width: 'auto',
+              fit: true
+            });
+          });
+        </script>  
+        
+        <script src="%PUBLIC_URL%/js/jquery-ui.js"></script>
+        <script>
+          $(window).load(function () {
+            $("#slider-range").slider({
+              range: true,
+              min: 0,
+              max: 9000,
+              values: [50, 6000],
+              slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+              }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+          }); 
+        </script>
+        <script type="text/javascript">
+          shoe.render();
+          var dataItems = shoe.cart.items();
+          var string = "";
+          var subtotal = 0;
+          for (i = 0; i < dataItems.length; i++) {
+            var total = dataItems[i].total();
+            subtotal += dataItems[i].total();
+            string += "<tr className='rem1'>"+
+                  "<td className='invert'>" +(i+1)+ "</td>"+
+                  "<td className='invert'>"+
+                  "<div className='quantity'>"+
+                    "<div className='quantity-select'>"+
+                      "<div className='entry value-minus'>&nbsp;</div>"+
+                      "<div className='entry value'>" +
+                        "<span>"+ dataItems[i].get('quantity') +"</span>"+
+                      "</div>"+
+                      "<div className='entry value-plus active'>&nbsp;</div>"+
+                    "</div>"+
+                  "</div>"+
+                "</td>"+
+                "<td className='invert'>" + dataItems[i].get('shoe_item') +"</td>"+
+                "<td className='invert'>$" + dataItems[i].amount() + "</td>"+
+                "<td className='invert'>"+
+                  "<div className='rem'>"+
+                    "<div className='close1'>$"+dataItems[i].total()+"</div>"+
+                  "</div>"+
+                "</td>";
+                console.log(dataItems[i].total());
+                console.log(dataItems[i].get('shoe_item'));
+          }
+
+
+          $("#dmm").find('tbody').html(string);
+          //document.getElementById("#dmm").html = string;
+          
+          
+      </script>
+        
+        
+</html>
